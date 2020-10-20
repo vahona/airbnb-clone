@@ -9,7 +9,7 @@ function PlaceList() {
   
 
   return (
-    <div>
+    <div className="places">
       {data.map(place => {
         data.length = 6
         return (

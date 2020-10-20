@@ -28463,7 +28463,9 @@ function PlaceList() {
       stay = _useState2[0],
       setStay = _useState2[1];
 
-  return /*#__PURE__*/_react.default.createElement("div", null, _stays.default.map(function (place) {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "places"
+  }, _stays.default.map(function (place) {
     _stays.default.length = 6;
     return /*#__PURE__*/_react.default.createElement("section", {
       className: "list_of_palce"
@@ -28532,10 +28534,20 @@ var Main = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("section", {
         className: "container"
-      }, /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("button", null, "Helsinki, Finland"), /*#__PURE__*/_react.default.createElement("button", null, "Add guests"), /*#__PURE__*/_react.default.createElement("button", null, /*#__PURE__*/_react.default.createElement("img", {
+      }, /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+        className: "buttons"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        className: "button_container"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        className: "town"
+      }, "Helsinki, Finland "), " ", /*#__PURE__*/_react.default.createElement("button", {
+        className: "add"
+      }, " Add guests"), " ", /*#__PURE__*/_react.default.createElement("button", {
+        className: "icon_button"
+      }, " ", /*#__PURE__*/_react.default.createElement("img", {
         src: _searchicon.default,
         className: "search"
-      }), " "), /*#__PURE__*/_react.default.createElement("img", {
+      }), " "))), /*#__PURE__*/_react.default.createElement("img", {
         src: _logo.default,
         className: "logo",
         alt: "logo"

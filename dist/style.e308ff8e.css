@@ -17,5 +17,51 @@ img {
 }
 
 
+.places {
+     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button_container {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+button {
+    background-color: white;
+}
+
+button > * {
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    border-right: 1px solid rgb(216, 216, 219);
+   
+}
+
+.icon_button {
+  border-right: none;
+}
+
+.button_container {
+   border: none;
+   box-shadow: 2px 2px 4px rgb(216, 216, 219);
+ 
+}
+
+.buttons {
+    float: right;
+   
+}
+
+span {
+    width: 0.5px;
+    height: 2rem;
+}
+
+.town, .add, .icon_button {
+    padding: 1rem;
+}
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

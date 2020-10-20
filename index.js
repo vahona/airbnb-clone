@@ -10,9 +10,9 @@ class Main extends React.Component {
     return (
       <section className="container">
         <h1> Stay in finland </h1>
-        <button>Helsinki, Finland</button>
-        <button>Add guests</button>
-        <button><img src={Icon} className="search" /> </button>
+        <div className="buttons">
+          <button className="button_container"><button className="town">Helsinki, Finland </button> <button className="add"> Add guests</button> <button className="icon_button"> <img src={Icon} className="search" /> </button></button>
+        </div>
         <img src={Logo} className="logo" alt="logo" />
         <div className="displayed">
         <PlaceList />
