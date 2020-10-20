@@ -14,6 +14,7 @@ function PlaceList() {
         data.length = 6
         return (
           <section className="list_of_palce">
+          <img src={place.photo} />
           <div>{place.city}</div>
           <div>{place.country}</div>
           <div>{place.superHost}</div>
@@ -22,7 +23,6 @@ function PlaceList() {
           <div>{place.beds}</div>
           <div>{place.rating}</div>
           <div>{place.maxGuests}</div>
-          <img src={place.photo} />
           </section>
         )
       })}

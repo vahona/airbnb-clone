@@ -28469,9 +28469,9 @@ function PlaceList() {
     _stays.default.length = 6;
     return /*#__PURE__*/_react.default.createElement("section", {
       className: "list_of_palce"
-    }, /*#__PURE__*/_react.default.createElement("div", null, place.city), /*#__PURE__*/_react.default.createElement("div", null, place.country), /*#__PURE__*/_react.default.createElement("div", null, place.superHost), /*#__PURE__*/_react.default.createElement("div", null, place.title), /*#__PURE__*/_react.default.createElement("div", null, place.type), /*#__PURE__*/_react.default.createElement("div", null, place.beds), /*#__PURE__*/_react.default.createElement("div", null, place.rating), /*#__PURE__*/_react.default.createElement("div", null, place.maxGuests), /*#__PURE__*/_react.default.createElement("img", {
+    }, /*#__PURE__*/_react.default.createElement("img", {
       src: place.photo
-    }));
+    }), /*#__PURE__*/_react.default.createElement("div", null, place.city), /*#__PURE__*/_react.default.createElement("div", null, place.country), /*#__PURE__*/_react.default.createElement("div", null, place.superHost), /*#__PURE__*/_react.default.createElement("div", null, place.title), /*#__PURE__*/_react.default.createElement("div", null, place.type), /*#__PURE__*/_react.default.createElement("div", null, place.beds), /*#__PURE__*/_react.default.createElement("div", null, place.rating), /*#__PURE__*/_react.default.createElement("div", null, place.maxGuests));
   }));
 }
 
@@ -28534,9 +28534,11 @@ var Main = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("section", {
         className: "container"
-      }, /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
-        className: "buttons"
-      }, /*#__PURE__*/_react.default.createElement("button", {
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: _logo.default,
+        className: "logo",
+        alt: "logo"
+      }), /*#__PURE__*/_react.default.createElement("button", {
         className: "button_container"
       }, /*#__PURE__*/_react.default.createElement("button", {
         className: "town"
@@ -28547,10 +28549,10 @@ var Main = /*#__PURE__*/function (_React$Component) {
       }, " ", /*#__PURE__*/_react.default.createElement("img", {
         src: _searchicon.default,
         className: "search"
-      }), " "))), /*#__PURE__*/_react.default.createElement("img", {
-        src: _logo.default,
-        className: "logo",
-        alt: "logo"
+      }), " ")), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+        className: "stays"
+      }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "buttons"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "displayed"
       }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
@@ -28589,7 +28591,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54688" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59650" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

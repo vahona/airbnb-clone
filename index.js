@@ -9,11 +9,12 @@ class Main extends React.Component {
   render() {
     return (
       <section className="container">
-        <h1> Stay in finland </h1>
-        <div className="buttons">
-          <button className="button_container"><button className="town">Helsinki, Finland </button> <button className="add"> Add guests</button> <button className="icon_button"> <img src={Icon} className="search" /> </button></button>
-        </div>
         <img src={Logo} className="logo" alt="logo" />
+        <button className="button_container"><button className="town">Helsinki, Finland </button> <button className="add"> Add guests</button> <button className="icon_button"> <img src={Icon} className="search" /> </button></button>
+        <h1> Stay in finland </h1>
+        <div className="stays">12+ stays</div>
+        <div className="buttons">
+        </div>
         <div className="displayed">
         <PlaceList />
         </div>

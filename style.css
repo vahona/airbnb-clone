@@ -1,15 +1,30 @@
 
 html {
-
+   
 }
 
 
+body {
+    background-color: #333333;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+    max-width: 1440px;
+    max-height: 500px;
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+}
+
 .search {
-    width: 5%;
+    width: 1000%;
 }
 
 img {
-    width: 50%;
+    width: 100%;
+    border-radius: 20px;
 }
 
 .logo {
@@ -17,10 +32,10 @@ img {
 }
 
 
-.places {
+/* .places {
      display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 
 .button_container {
     background-color: white;
@@ -42,7 +57,10 @@ button > * {
 
 .icon_button {
   border-right: none;
+  width: min-content;
 }
+
+
 
 .button_container {
    border: none;
@@ -52,6 +70,7 @@ button > * {
 
 .buttons {
     float: right;
+    margin-block-start: -60px;
    
 }
 
@@ -62,4 +81,27 @@ span {
 
 .town, .add, .icon_button {
     padding: 1rem;
+}
+
+.button_container {
+    margin-top: 0;
+}
+
+.add {
+    color:  #BDBDBD;
+}
+
+.container {
+    margin: 2rem;
+    padding: 1rem;
+    
+}
+
+
+
+
+.stays {
+    font-weight: 700;
+    float: right;
+    padding-bottom: 1rem;
 }
