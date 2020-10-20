@@ -3,18 +3,25 @@ import data from '../stays'
 import Start from  '../start.png'
 
 
+
 function PlaceList() {
+
+
 
   const [stay, setStay] = useState('');
 
-  
+  const searchPlace = (e) => {
+    e.preventDefault()
+    console.log("Yes");
+  }
+
 
   return (
-    <div className="places">
+    <div className="places" >
       {data.map(place => {
         data.length = 6
         return (
-          <section className="list_of_palce">
+          <section className="list_of_palce" key={place.id}>
           <img src={place.photo} />
           <article className="information">
           <div>{place.superHost}<button className="host">Super host</button></div>

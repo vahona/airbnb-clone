@@ -75,6 +75,10 @@ button > * {
 .icon_button {
   border-right: none;
   width: min-content;
+  background-image: url('./searchicon.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right 35% bottom 0% ;
 }
 
 
@@ -102,6 +106,10 @@ span {
 
 .button_container {
     margin-top: 0;
+    right: 0;
+    top: 0;
+    bottom: 100%;
+    left: 50%;
 }
 
 .add {
@@ -149,6 +157,8 @@ span {
     color: #4F4F4F;
     padding: 0.3rem;
 }
+
+
 
 
 

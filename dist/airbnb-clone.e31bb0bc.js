@@ -28287,6 +28287,7 @@ if ("development" === 'production') {
 }
 },{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"stays.json":[function(require,module,exports) {
 module.exports = [{
+  "id": 1,
   "city": "Helsinki",
   "country": "Finland",
   "superHost": false,
@@ -28297,6 +28298,7 @@ module.exports = [{
   "beds": 2,
   "photo": "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
 }, {
+  "id": 2,
   "city": "Turku",
   "country": "Finland",
   "superHost": false,
@@ -28307,6 +28309,7 @@ module.exports = [{
   "beds": 3,
   "photo": "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
 }, {
+  "id": 3,
   "city": "Helsinki",
   "country": "Finland",
   "superHost": true,
@@ -28317,6 +28320,7 @@ module.exports = [{
   "beds": 6,
   "photo": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
 }, {
+  "id": 4,
   "city": "Helsinki",
   "country": "Finland",
   "superHost": false,
@@ -28327,6 +28331,7 @@ module.exports = [{
   "beds": null,
   "photo": "https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 }, {
+  "id": 5,
   "city": "Turku",
   "country": "Finland",
   "superHost": true,
@@ -28337,6 +28342,7 @@ module.exports = [{
   "beds": null,
   "photo": "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80"
 }, {
+  "id": 6,
   "city": "Vaasa",
   "country": "Finland",
   "superHost": true,
@@ -28347,6 +28353,7 @@ module.exports = [{
   "beds": null,
   "photo": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
 }, {
+  "id": 7,
   "city": "Vaasa",
   "country": "Finland",
   "superHost": false,
@@ -28357,6 +28364,7 @@ module.exports = [{
   "beds": null,
   "photo": "https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2591&q=80"
 }, {
+  "id": 8,
   "city": "Oulu",
   "country": "Finland",
   "superHost": false,
@@ -28367,6 +28375,7 @@ module.exports = [{
   "beds": 3,
   "photo": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
 }, {
+  "id": 9,
   "city": "Oulu",
   "country": "Finland",
   "superHost": false,
@@ -28377,6 +28386,7 @@ module.exports = [{
   "beds": 1,
   "photo": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2255&q=80"
 }, {
+  "id": 10,
   "city": "Oulu",
   "country": "Finland",
   "superHost": true,
@@ -28387,6 +28397,7 @@ module.exports = [{
   "beds": null,
   "photo": "https://images.unsplash.com/photo-1522156373667-4c7234bbd804?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=930&q=80"
 }, {
+  "id": 11,
   "city": "Vaasa",
   "country": "Finland",
   "superHost": false,
@@ -28397,6 +28408,7 @@ module.exports = [{
   "beds": 3,
   "photo": "https://images.unsplash.com/photo-1494203484021-3c454daf695d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
 }, {
+  "id": 12,
   "city": "Helsinki",
   "country": "Finland",
   "superHost": false,
@@ -28407,6 +28419,7 @@ module.exports = [{
   "beds": null,
   "photo": "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
 }, {
+  "id": 13,
   "city": "Turku",
   "country": "Finland",
   "superHost": false,
@@ -28417,6 +28430,7 @@ module.exports = [{
   "beds": 3,
   "photo": "https://images.unsplash.com/photo-1519643381401-22c77e60520e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=2253&q=80"
 }, {
+  "id": 14,
   "city": "Turku",
   "country": "Finland",
   "superHost": true,
@@ -28467,12 +28481,18 @@ function PlaceList() {
       stay = _useState2[0],
       setStay = _useState2[1];
 
+  var searchPlace = function searchPlace(e) {
+    e.preventDefault();
+    console.log("Yes");
+  };
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "places"
   }, _stays.default.map(function (place) {
     _stays.default.length = 6;
     return /*#__PURE__*/_react.default.createElement("section", {
-      className: "list_of_palce"
+      className: "list_of_palce",
+      key: place.id
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: place.photo
     }), /*#__PURE__*/_react.default.createElement("article", {
@@ -28496,12 +28516,10 @@ var _default = PlaceList;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","../stays":"stays.json","../start.png":"start.png"}],"logo.png":[function(require,module,exports) {
 module.exports = "/logo.de01bb0e.png";
-},{}],"searchicon.png":[function(require,module,exports) {
-module.exports = "/searchicon.822e542c.png";
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
@@ -28509,80 +28527,63 @@ var _PlaceList = _interopRequireDefault(require("./Components/PlaceList"));
 
 var _logo = _interopRequireDefault(require("./logo.png"));
 
-var _searchicon = _interopRequireDefault(require("./searchicon.png"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+// import Icon from './searchicon.png'
+function Main() {
+  var _useState = (0, _react.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      sit = _useState2[0],
+      setSit = _useState2[1];
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+  var searchPlace = function searchPlace(e) {
+    e.preventDefault(), console.log("me");
+  };
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Main = /*#__PURE__*/function (_React$Component) {
-  _inherits(Main, _React$Component);
-
-  var _super = _createSuper(Main);
-
-  function Main() {
-    _classCallCheck(this, Main);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Main, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("section", {
-        className: "container"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        src: _logo.default,
-        className: "logo",
-        alt: "logo"
-      }), /*#__PURE__*/_react.default.createElement("button", {
-        className: "button_container"
-      }, /*#__PURE__*/_react.default.createElement("input", {
-        className: "town",
-        placeholder: "Helsinki, Finland "
-      }), " ", /*#__PURE__*/_react.default.createElement("input", {
-        className: "add",
-        placeholder: " Add guests"
-      }), " ", /*#__PURE__*/_react.default.createElement("button", {
-        className: "icon_button"
-      }, " ", /*#__PURE__*/_react.default.createElement("img", {
-        src: _searchicon.default,
-        className: "search"
-      }), " ")), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
-        className: "stays"
-      }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
-        className: "buttons"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "displayed"
-      }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
-    }
-  }]);
-
-  return Main;
-}(_react.default.Component);
+  return /*#__PURE__*/_react.default.createElement("section", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _logo.default,
+    className: "logo",
+    alt: "logo"
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    className: "button_container"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    className: "town",
+    placeholder: "Helsinki, Finland "
+  }), " ", /*#__PURE__*/_react.default.createElement("input", {
+    className: "add",
+    placeholder: " Add guests"
+  }), " ", /*#__PURE__*/_react.default.createElement("button", {
+    onClick: searchPlace,
+    className: "icon_button"
+  })), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "stays"
+  }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "buttons"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "displayed"
+  }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
+}
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Main, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png","./searchicon.png":"searchicon.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28610,7 +28611,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59650" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
