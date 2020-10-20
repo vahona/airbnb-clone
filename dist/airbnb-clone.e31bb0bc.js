@@ -28427,6 +28427,8 @@ module.exports = [{
   "beds": 3,
   "photo": "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80"
 }];
+},{}],"start.png":[function(require,module,exports) {
+module.exports = "/start.dfd3f360.png";
 },{}],"Components/PlaceList.js":[function(require,module,exports) {
 "use strict";
 
@@ -28438,6 +28440,8 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _stays = _interopRequireDefault(require("../stays"));
+
+var _start = _interopRequireDefault(require("../start.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28471,13 +28475,26 @@ function PlaceList() {
       className: "list_of_palce"
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: place.photo
-    }), /*#__PURE__*/_react.default.createElement("div", null, place.city), /*#__PURE__*/_react.default.createElement("div", null, place.country), /*#__PURE__*/_react.default.createElement("div", null, place.superHost), /*#__PURE__*/_react.default.createElement("div", null, place.title), /*#__PURE__*/_react.default.createElement("div", null, place.type), /*#__PURE__*/_react.default.createElement("div", null, place.beds), /*#__PURE__*/_react.default.createElement("div", null, place.rating), /*#__PURE__*/_react.default.createElement("div", null, place.maxGuests));
+    }), /*#__PURE__*/_react.default.createElement("article", {
+      className: "information"
+    }, /*#__PURE__*/_react.default.createElement("div", null, place.superHost, /*#__PURE__*/_react.default.createElement("button", {
+      className: "host"
+    }, "Super host")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+      className: "type"
+    }, place.type, ":", /*#__PURE__*/_react.default.createElement("div", {
+      className: "beds"
+    }, place.beds, "beds"))), /*#__PURE__*/_react.default.createElement("div", {
+      className: "rating"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      className: "star",
+      src: _start.default
+    }), " ", place.rating)), /*#__PURE__*/_react.default.createElement("div", null, place.city), /*#__PURE__*/_react.default.createElement("div", null, place.country), /*#__PURE__*/_react.default.createElement("div", null, place.title), /*#__PURE__*/_react.default.createElement("div", null, place.maxGuests));
   }));
 }
 
 var _default = PlaceList;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../stays":"stays.json"}],"logo.png":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../stays":"stays.json","../start.png":"start.png"}],"logo.png":[function(require,module,exports) {
 module.exports = "/logo.de01bb0e.png";
 },{}],"searchicon.png":[function(require,module,exports) {
 module.exports = "/searchicon.822e542c.png";

@@ -106,4 +106,45 @@ span {
     padding-bottom: 1rem;
 }
 
+.star {
+    width: 10%;
+}
+
+.rating {
+    float: right;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #4F4F4F;
+}
+
+.host {
+    text-transform: uppercase;
+    border-radius: 25px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    padding: 0.3rem;
+}
+
+/* .information {
+    display: flex;
+   
+} */
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.host, .type, .bed .rating {
+    margin: 1rem;
+}
+
 /*# sourceMappingURL=/style.e308ff8e.css.map */

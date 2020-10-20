@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import data from '../stays'
+import Start from  '../start.png'
 
 
 function PlaceList() {
@@ -15,13 +16,16 @@ function PlaceList() {
         return (
           <section className="list_of_palce">
           <img src={place.photo} />
+          <article className="information">
+          <div>{place.superHost}<button className="host">Super host</button></div>
+          <div>
+              <div className="type">{place.type}:<div className="beds">{place.beds}beds</div></div>
+          </div>
+          <div className="rating"><img className="star" src={Start} /> {place.rating}</div>
+          </article>
           <div>{place.city}</div>
           <div>{place.country}</div>
-          <div>{place.superHost}</div>
           <div>{place.title}</div>
-          <div>{place.type}</div>
-          <div>{place.beds}</div>
-          <div>{place.rating}</div>
           <div>{place.maxGuests}</div>
           </section>
         )
