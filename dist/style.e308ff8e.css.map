@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"style.e308ff8e.css","sourceRoot":"..","sourcesContent":["\r\nhtml {\r\n\r\n}\r\n\r\n\r\n.search {\r\n    width: 5%;\r\n}\r\n\r\nimg {\r\n    width: 50%;\r\n}\r\n\r\n.logo {\r\n    width: 10%;\r\n}\r\n\r\n"]}
