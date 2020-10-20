@@ -1,12 +1,20 @@
-import React from 'react'
+// import React, { useState } from 'react'
 
 
-function Display() {
+// const  Display = () => {
+
+//     const [ShowNewView, setSowNewView] = useState(false)
+
+//     function goodPlace() {
+//         setSowNewView(!ShowNewView)
+//     }
+
+//     return {
+//         ShowNewView,
+//         goodPlace,
+//     }
+
+// }
 
 
-
-
-}
-
-
-export default Display
+// export default Display

@@ -28527,6 +28527,8 @@ var _PlaceList = _interopRequireDefault(require("./Components/PlaceList"));
 
 var _logo = _interopRequireDefault(require("./logo.png"));
 
+var _stays = _interopRequireDefault(require("./stays"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -28545,15 +28547,22 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// import Icon from './searchicon.png'
-function Main() {
-  var _useState = (0, _react.useState)([]),
+var Main = function Main() {
+  var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
-      sit = _useState2[0],
-      setSit = _useState2[1];
+      stay = _useState2[0],
+      setStay = _useState2[1];
+
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      stays = _useState4[0],
+      setStays = _useState4[1];
 
   var searchPlace = function searchPlace(e) {
-    e.preventDefault(), console.log("me");
+    e.preventDefault();
+    console.log("yes");
+    var data = data;
+    console.log(data);
   };
 
   return /*#__PURE__*/_react.default.createElement("section", {
@@ -28571,8 +28580,8 @@ function Main() {
     className: "add",
     placeholder: " Add guests"
   }), " ", /*#__PURE__*/_react.default.createElement("button", {
-    onClick: searchPlace,
-    className: "icon_button"
+    className: "icon_button",
+    onClick: searchPlace
   })), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
     className: "stays"
   }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
@@ -28580,10 +28589,10 @@ function Main() {
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "displayed"
   }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
-}
+};
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Main, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png","./stays":"stays.json"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

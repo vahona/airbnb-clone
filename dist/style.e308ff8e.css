@@ -82,11 +82,19 @@ button > * {
 }
 
 
+.icon_button:hover {
+   outline: none;
+}
+
 
 .button_container {
    border: none;
    box-shadow: 2px 2px 4px rgb(216, 216, 219);
  
+}
+
+.button_container:hover {
+    outline: none;
 }
 
 .buttons {
@@ -170,6 +178,9 @@ article {
 .host, .type, .bed .rating {
     margin: 1rem;
 }
+
+
+
 
 @media (min-width: 1000px) {
   .places {
