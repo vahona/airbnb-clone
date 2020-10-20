@@ -10,7 +10,7 @@ class Main extends React.Component {
     return (
       <section className="container">
         <img src={Logo} className="logo" alt="logo" />
-        <button className="button_container"><button className="town">Helsinki, Finland </button> <button className="add"> Add guests</button> <button className="icon_button"> <img src={Icon} className="search" /> </button></button>
+        <button className="button_container"><input className="town" placeholder='Helsinki, Finland ' /> <input className="add" placeholder=" Add guests" /> <button className="icon_button"> <img src={Icon} className="search" /> </button></button>
         <h1> Stay in finland </h1>
         <div className="stays">12+ stays</div>
         <div className="buttons">

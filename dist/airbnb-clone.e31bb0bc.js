@@ -28557,11 +28557,13 @@ var Main = /*#__PURE__*/function (_React$Component) {
         alt: "logo"
       }), /*#__PURE__*/_react.default.createElement("button", {
         className: "button_container"
-      }, /*#__PURE__*/_react.default.createElement("button", {
-        className: "town"
-      }, "Helsinki, Finland "), " ", /*#__PURE__*/_react.default.createElement("button", {
-        className: "add"
-      }, " Add guests"), " ", /*#__PURE__*/_react.default.createElement("button", {
+      }, /*#__PURE__*/_react.default.createElement("input", {
+        className: "town",
+        placeholder: "Helsinki, Finland "
+      }), " ", /*#__PURE__*/_react.default.createElement("input", {
+        className: "add",
+        placeholder: " Add guests"
+      }), " ", /*#__PURE__*/_react.default.createElement("button", {
         className: "icon_button"
       }, " ", /*#__PURE__*/_react.default.createElement("img", {
         src: _searchicon.default,

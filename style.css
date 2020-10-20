@@ -32,10 +32,7 @@ img {
 }
 
 
-/* .places {
-     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */
+
 
 .button_container {
     background-color: white;
@@ -133,10 +130,7 @@ span {
     padding: 0.3rem;
 }
 
-/* .information {
-    display: flex;
-   
-} */
+
 
 article {
     display: grid;
@@ -145,4 +139,17 @@ article {
 
 .host, .type, .bed .rating {
     margin: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .places {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+}
+
+.button_container {
+    float: right;
+}
 }
