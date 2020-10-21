@@ -1,0 +1,48 @@
+.modal {
+    background-color: white;
+    top: 5%;
+    position: absolute;
+    margin-inline-end: 1rem;
+    padding: 1rem;
+    margin-inline-start: -3rem;
+    border-radius: 10px;
+    width: 87%;
+
+}
+
+.close_button {
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: 1rem;
+    outline: none;
+    border: none;
+}
+
+.inputs {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgb(216, 216, 219);
+ 
+}
+
+.location, .guest {
+  padding: 0.75rem;
+  margin: 2px;
+  outline: none;
+  border: none;
+  width: 95%;
+  /* box-shadow: 2px 2px 4px rgb(216, 216, 219); */
+}
+
+.guest {
+  margin-top: 0;
+  border-top: 1px solid gainsboro;
+  
+}
+
+fieldset {
+    border: none;
+}
+
+/*# sourceMappingURL=/modal.5b5f56f0.css.map */

@@ -28597,15 +28597,26 @@ var Main = /*#__PURE__*/function (_React$Component) {
         style: this.state.toggle ? display : hide
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "modal_content"
-      }, /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("button", null, /*#__PURE__*/_react.default.createElement("input", {
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        className: "close_button",
+        onClick: this.toggle
+      }, "X"), /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("button", {
+        className: "inputs"
+      }, /*#__PURE__*/_react.default.createElement("input", {
         type: "text",
-        placeholder: "Location"
+        placeholder: "Location",
+        className: "location"
       }), /*#__PURE__*/_react.default.createElement("input", {
         type: "text",
-        placeholder: "guests"
-      })), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("input", {
-        type: "checkbox"
-      }), /*#__PURE__*/_react.default.createElement("label", null, _stays.default.city))))));
+        placeholder: "guests",
+        className: "guest"
+      })), /*#__PURE__*/_react.default.createElement("form", null, _stays.default.map(function (datas) {
+        return /*#__PURE__*/_react.default.createElement("fieldset", {
+          className: "form"
+        }, /*#__PURE__*/_react.default.createElement("input", {
+          type: "checkbox"
+        }), /*#__PURE__*/_react.default.createElement("label", null, datas.city, "  ", datas.country));
+      }))))));
       return /*#__PURE__*/_react.default.createElement("section", {
         className: "container"
       }, /*#__PURE__*/_react.default.createElement("img", {

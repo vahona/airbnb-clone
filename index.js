@@ -13,7 +13,6 @@ const hide = {
   display: "none"
 };
 
-
   class Main extends React.Component {
 
     constructor(props) {
@@ -26,7 +25,6 @@ const hide = {
       }
 
     }
-
 
     toggle(e) {
       this.setState((prevState) => ({
@@ -42,15 +40,22 @@ const hide = {
     var modal = [];
     modal.push(<div className="modal" style={this.state.toggle ? display : hide}>
       <div className="modal_content">
+        <button className="close_button" onClick={this.toggle}>X</button>
         <section>
           <h1>Edit your search</h1>
-          <button>
-            <input type="text" placeholder="Location" />
-            <input type="text" placeholder="guests"/>
+          <button className="inputs">
+            <input type="text" placeholder="Location" className="location" />
+            <input type="text" placeholder="guests" className="guest"/>
           </button>
           <form>
-          <input type="checkbox" />
-          <label>{data.city}</label>
+            {data.map(datas => {
+              return (
+                <fieldset className="form">
+                  <input type="checkbox" />
+              <label>{datas.city}  {datas.country}</label>
+                </fieldset>
+              )
+              })}
           </form>
         </section>
       </div>
