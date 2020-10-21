@@ -28463,24 +28463,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function PlaceList() {
-  var _useState = (0, _react.useState)(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      stay = _useState2[0],
-      setStay = _useState2[1];
-
   var searchPlace = function searchPlace(e) {
     e.preventDefault();
     console.log("Yes");
@@ -28516,12 +28499,15 @@ var _default = PlaceList;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","../stays":"stays.json","../start.png":"start.png"}],"logo.png":[function(require,module,exports) {
 module.exports = "/logo.de01bb0e.png";
-},{}],"index.js":[function(require,module,exports) {
+},{}],"Main.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
+var _react = _interopRequireDefault(require("react"));
 
 var _PlaceList = _interopRequireDefault(require("./Components/PlaceList"));
 
@@ -28581,6 +28567,7 @@ var Main = /*#__PURE__*/function (_React$Component) {
   _createClass(Main, [{
     key: "toggle",
     value: function toggle(e) {
+      e.preventDefault();
       this.setState(function (prevState) {
         return {
           toggle: !prevState.toggle
@@ -28623,18 +28610,18 @@ var Main = /*#__PURE__*/function (_React$Component) {
         src: _logo.default,
         className: "logo",
         alt: "logo"
-      }), /*#__PURE__*/_react.default.createElement("button", {
+      }), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("button", {
         className: "button_container"
       }, /*#__PURE__*/_react.default.createElement("input", {
         className: "town",
         placeholder: "Helsinki, Finland "
-      }), " ", /*#__PURE__*/_react.default.createElement("input", {
+      }), /*#__PURE__*/_react.default.createElement("input", {
         className: "add",
         placeholder: " Add guests"
-      }), " ", /*#__PURE__*/_react.default.createElement("button", {
+      }), /*#__PURE__*/_react.default.createElement("button", {
         className: "icon_button",
         onClick: this.toggle
-      }, this.state.toggle)), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+      }, this.state.toggle))), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
         className: "stays"
       }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
         className: "buttons"
@@ -28647,8 +28634,21 @@ var Main = /*#__PURE__*/function (_React$Component) {
   return Main;
 }(_react.default.Component);
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Main, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png","./stays":"stays.json"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _default = Main;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png","./stays":"stays.json"}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _Main = _interopRequireDefault(require("./Main"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_Main.default, null), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Main":"Main.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

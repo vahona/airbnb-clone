@@ -7,9 +7,6 @@ import Start from  '../start.png'
 function PlaceList() {
 
 
-
-  const [stay, setStay] = useState('');
-
   const searchPlace = (e) => {
     e.preventDefault()
     console.log("Yes");
