@@ -28519,7 +28519,7 @@ module.exports = "/logo.de01bb0e.png";
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
@@ -28531,65 +28531,110 @@ var _stays = _interopRequireDefault(require("./stays"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-var Main = function Main() {
-  var _useState = (0, _react.useState)(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      stay = _useState2[0],
-      setStay = _useState2[1];
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-  var _useState3 = (0, _react.useState)([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      stays = _useState4[0],
-      setStays = _useState4[1];
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
-  var searchPlace = function searchPlace(e) {
-    e.preventDefault();
-    console.log("yes");
-    var data = data;
-    console.log(data);
-  };
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-  return /*#__PURE__*/_react.default.createElement("section", {
-    className: "container"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: _logo.default,
-    className: "logo",
-    alt: "logo"
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    className: "button_container"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    className: "town",
-    placeholder: "Helsinki, Finland "
-  }), " ", /*#__PURE__*/_react.default.createElement("input", {
-    className: "add",
-    placeholder: " Add guests"
-  }), " ", /*#__PURE__*/_react.default.createElement("button", {
-    className: "icon_button",
-    onClick: searchPlace
-  })), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "stays"
-  }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "buttons"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "displayed"
-  }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
+var display = {
+  display: "block"
 };
+var hide = {
+  display: "none"
+};
+
+var Main = /*#__PURE__*/function (_React$Component) {
+  _inherits(Main, _React$Component);
+
+  var _super = _createSuper(Main);
+
+  function Main(props) {
+    var _this;
+
+    _classCallCheck(this, Main);
+
+    _this = _super.call(this, props);
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
+    _this.state = {
+      toggle: false
+    };
+    return _this;
+  }
+
+  _createClass(Main, [{
+    key: "toggle",
+    value: function toggle(e) {
+      this.setState(function (prevState) {
+        return {
+          toggle: !prevState.toggle
+        };
+      });
+      console.log(e);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var modal = [];
+      modal.push( /*#__PURE__*/_react.default.createElement("div", {
+        className: "modal",
+        style: this.state.toggle ? display : hide
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "modal_content"
+      }, /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("button", null, /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        placeholder: "Location"
+      }), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        placeholder: "guests"
+      })), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("input", {
+        type: "checkbox"
+      }), /*#__PURE__*/_react.default.createElement("label", null, _stays.default.city))))));
+      return /*#__PURE__*/_react.default.createElement("section", {
+        className: "container"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: _logo.default,
+        className: "logo",
+        alt: "logo"
+      }), /*#__PURE__*/_react.default.createElement("button", {
+        className: "button_container"
+      }, /*#__PURE__*/_react.default.createElement("input", {
+        className: "town",
+        placeholder: "Helsinki, Finland "
+      }), " ", /*#__PURE__*/_react.default.createElement("input", {
+        className: "add",
+        placeholder: " Add guests"
+      }), " ", /*#__PURE__*/_react.default.createElement("button", {
+        className: "icon_button",
+        onClick: this.toggle
+      }, this.state.toggle)), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+        className: "stays"
+      }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "buttons"
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "displayed"
+      }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)), modal);
+    }
+  }]);
+
+  return Main;
+}(_react.default.Component);
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Main, null), document.getElementById('root'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/PlaceList":"Components/PlaceList.js","./logo.png":"logo.png","./stays":"stays.json"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -28620,7 +28665,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61957" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50403" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
