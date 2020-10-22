@@ -23,6 +23,7 @@ class Main extends React.Component {
       toggle: false,
 
     }
+    this.handleChange = this.handleChange.bind(this)
     
   }
 
@@ -36,7 +37,7 @@ class Main extends React.Component {
   }
 
   handleChange(event) {
-    this.props.updateSearch(event.target.value);
+    this.setState(event.target.value);
     PlaceList()
   }
 
@@ -44,15 +45,14 @@ class Main extends React.Component {
     if(!this.props.filter) {
       return PlaceList
     }
-    return PlaceList.filter((PlaceLists) => PlaceList.toLowerCase().indexOf(this.props.filter.toLowerCase())>=0)
+    return PlaceList.filter((PlaceLists) => PlaceList.toLowerCase().indexOf(this.props.filter.toLowerCase()))
   }
 
   updateSearch(inputValue) {
    let filter = this.state.fielter;
-
    this.setState({fielter: inputValue});
-  }
 
+  }
 
   render() {
 
@@ -63,10 +63,15 @@ class Main extends React.Component {
         <section>
           <h1>Edit your search</h1>
           <div className="inputs">
-            <input type="text" placeholder="Location" className="location" onChange={this.handleChange.bind(this)} value={this.props.searchText}  />
-            <input type="text" placeholder="guests" className="guest" onChange={this.handleChange.bind(this)} value={this.props.searchText} />
+            <input 
+             type="text"
+             placeholder="Location" 
+             className="location"
+             onChange={this.handleChange.bind(this)} 
+             value={this.props.searchText} />
+            <input type="text" placeholder="guests" className="guest" onChange={this.handleChange} value={this.props.searchText} />
           </div>
-          <form>
+          <form >
             {data.map(datas => {
               return (
                 <fieldset className="form">
@@ -87,14 +92,14 @@ class Main extends React.Component {
         <img src={Logo} className="logo" alt="logo" />
         <form>
           <div className="button_container">
-            <input className="town" placeholder='Helsinki, Finland ' onChange={this.handleChange.bind(this)} value={this.props.searchText} />
-            <input className="add" placeholder=" Add guests" onChange={this.handleChange.bind(this)} value={this.props.searchText} />
+            <input className="town" placeholder='Helsinki, Finland ' onChange={this.handleChange} value={this.props.searchText} />
+            <input className="add" placeholder=" Add guests" onChange={this.handleChange} value={this.props.searchText} />
             <button className="icon_button" onClick={this.toggle}>
               {this.toggle}
             </button>
           </div>
-          {modal}
         </form>
+        {modal}
         <h1> Stay in finland </h1>
         <div className="stays">12+ stays</div>
         <div className="buttons">

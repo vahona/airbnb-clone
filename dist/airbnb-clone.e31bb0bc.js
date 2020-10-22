@@ -28556,6 +28556,7 @@ var Main = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       toggle: false
     };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -28572,7 +28573,7 @@ var Main = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleChange",
     value: function handleChange(event) {
-      this.props.updateSearch(event.target.value);
+      this.setState(event.target.value);
       (0, _PlaceList.default)();
     }
   }, {
@@ -28585,7 +28586,7 @@ var Main = /*#__PURE__*/function (_React$Component) {
       }
 
       return PlaceList.filter(function (PlaceLists) {
-        return PlaceList.toLowerCase().indexOf(_this2.props.filter.toLowerCase()) >= 0;
+        return PlaceList.toLowerCase().indexOf(_this2.props.filter.toLowerCase());
       });
     }
   }, {
@@ -28620,7 +28621,7 @@ var Main = /*#__PURE__*/function (_React$Component) {
         type: "text",
         placeholder: "guests",
         className: "guest",
-        onChange: this.handleChange.bind(this),
+        onChange: this.handleChange,
         value: this.props.searchText
       })), /*#__PURE__*/_react.default.createElement("form", null, _stays.default.map(function (datas) {
         return /*#__PURE__*/_react.default.createElement("fieldset", {
@@ -28640,17 +28641,17 @@ var Main = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react.default.createElement("input", {
         className: "town",
         placeholder: "Helsinki, Finland ",
-        onChange: this.handleChange.bind(this),
+        onChange: this.handleChange,
         value: this.props.searchText
       }), /*#__PURE__*/_react.default.createElement("input", {
         className: "add",
         placeholder: " Add guests",
-        onChange: this.handleChange.bind(this),
+        onChange: this.handleChange,
         value: this.props.searchText
       }), /*#__PURE__*/_react.default.createElement("button", {
         className: "icon_button",
         onClick: this.toggle
-      }, this.toggle)), modal), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+      }, this.toggle))), modal, /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
         className: "stays"
       }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
         className: "buttons"
