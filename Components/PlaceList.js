@@ -7,12 +7,6 @@ import Start from  '../start.png'
 function PlaceList() {
 
 
-  const searchPlace = (e) => {
-    e.preventDefault()
-    console.log("Yes");
-  }
-
-
   return (
     <div className="places" >
       {data.map(place => {

@@ -11,6 +11,7 @@ const hide = {
   display: "none"
 };
 
+
 class Main extends React.Component {
 
   constructor(props) {
@@ -31,9 +32,26 @@ class Main extends React.Component {
       toggle: !prevState.toggle
 
     }));
-    console.log(e);
+    
   }
 
+  handleChange(event) {
+    this.props.updateSearch(event.target.value);
+    PlaceList()
+  }
+
+  filter(PlaceList) {
+    if(!this.props.filter) {
+      return PlaceList
+    }
+    return PlaceList.filter((PlaceLists) => PlaceList.toLowerCase().indexOf(this.props.filter.toLowerCase())>=0)
+  }
+
+  updateSearch(inputValue) {
+   let filter = this.state.fielter;
+
+   this.setState({fielter: inputValue});
+  }
 
 
   render() {
@@ -44,10 +62,10 @@ class Main extends React.Component {
         <button className="close_button" onClick={this.toggle}>X</button>
         <section>
           <h1>Edit your search</h1>
-          <button className="inputs">
-            <input type="text" placeholder="Location" className="location" />
-            <input type="text" placeholder="guests" className="guest" />
-          </button>
+          <div className="inputs">
+            <input type="text" placeholder="Location" className="location" onChange={this.handleChange.bind(this)} value={this.props.searchText}  />
+            <input type="text" placeholder="guests" className="guest" onChange={this.handleChange.bind(this)} value={this.props.searchText} />
+          </div>
           <form>
             {data.map(datas => {
               return (
@@ -68,13 +86,14 @@ class Main extends React.Component {
       <section className="container">
         <img src={Logo} className="logo" alt="logo" />
         <form>
-          <button className="button_container">
-            <input className="town" placeholder='Helsinki, Finland ' />
-            <input className="add" placeholder=" Add guests" />
+          <div className="button_container">
+            <input className="town" placeholder='Helsinki, Finland ' onChange={this.handleChange.bind(this)} value={this.props.searchText} />
+            <input className="add" placeholder=" Add guests" onChange={this.handleChange.bind(this)} value={this.props.searchText} />
             <button className="icon_button" onClick={this.toggle}>
-              {this.state.toggle}
+              {this.toggle}
             </button>
-          </button>
+          </div>
+          {modal}
         </form>
         <h1> Stay in finland </h1>
         <div className="stays">12+ stays</div>
@@ -83,7 +102,6 @@ class Main extends React.Component {
         <div className="displayed">
           <PlaceList />
         </div>
-        {modal}
       </section>
     );
   }

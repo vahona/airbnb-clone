@@ -28464,11 +28464,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function PlaceList() {
-  var searchPlace = function searchPlace(e) {
-    e.preventDefault();
-    console.log("Yes");
-  };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "places"
   }, _stays.default.map(function (place) {
@@ -28573,7 +28568,33 @@ var Main = /*#__PURE__*/function (_React$Component) {
           toggle: !prevState.toggle
         };
       });
-      console.log(e);
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(event) {
+      this.props.updateSearch(event.target.value);
+      (0, _PlaceList.default)();
+    }
+  }, {
+    key: "filter",
+    value: function filter(PlaceList) {
+      var _this2 = this;
+
+      if (!this.props.filter) {
+        return PlaceList;
+      }
+
+      return PlaceList.filter(function (PlaceLists) {
+        return PlaceList.toLowerCase().indexOf(_this2.props.filter.toLowerCase()) >= 0;
+      });
+    }
+  }, {
+    key: "updateSearch",
+    value: function updateSearch(inputValue) {
+      var filter = this.state.fielter;
+      this.setState({
+        fielter: inputValue
+      });
     }
   }, {
     key: "render",
@@ -28587,16 +28608,20 @@ var Main = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react.default.createElement("button", {
         className: "close_button",
         onClick: this.toggle
-      }, "X"), /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("button", {
+      }, "X"), /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("div", {
         className: "inputs"
       }, /*#__PURE__*/_react.default.createElement("input", {
         type: "text",
         placeholder: "Location",
-        className: "location"
+        className: "location",
+        onChange: this.handleChange.bind(this),
+        value: this.props.searchText
       }), /*#__PURE__*/_react.default.createElement("input", {
         type: "text",
         placeholder: "guests",
-        className: "guest"
+        className: "guest",
+        onChange: this.handleChange.bind(this),
+        value: this.props.searchText
       })), /*#__PURE__*/_react.default.createElement("form", null, _stays.default.map(function (datas) {
         return /*#__PURE__*/_react.default.createElement("fieldset", {
           className: "form"
@@ -28610,24 +28635,28 @@ var Main = /*#__PURE__*/function (_React$Component) {
         src: _logo.default,
         className: "logo",
         alt: "logo"
-      }), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("button", {
+      }), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
         className: "button_container"
       }, /*#__PURE__*/_react.default.createElement("input", {
         className: "town",
-        placeholder: "Helsinki, Finland "
+        placeholder: "Helsinki, Finland ",
+        onChange: this.handleChange.bind(this),
+        value: this.props.searchText
       }), /*#__PURE__*/_react.default.createElement("input", {
         className: "add",
-        placeholder: " Add guests"
+        placeholder: " Add guests",
+        onChange: this.handleChange.bind(this),
+        value: this.props.searchText
       }), /*#__PURE__*/_react.default.createElement("button", {
         className: "icon_button",
         onClick: this.toggle
-      }, this.state.toggle))), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+      }, this.toggle)), modal), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
         className: "stays"
       }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
         className: "buttons"
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "displayed"
-      }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)), modal);
+      }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
     }
   }]);
 
@@ -28676,7 +28705,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50403" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61347" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

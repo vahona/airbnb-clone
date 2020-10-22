@@ -73,12 +73,14 @@ button > * {
 }
 
 .icon_button {
-  border-right: none;
+  border-radius: 20px;
   width: min-content;
   background-image: url('./searchicon.png');
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: right 35% bottom 0% ;
+  background-position: right 35% bottom 50% ;
+  
+
 }
 
 
@@ -122,6 +124,19 @@ span {
 
 .add {
     color:  #BDBDBD;
+    border-top: none;
+    border-bottom: none;
+    border-top: none;
+    border-color: whitesmoke;
+}
+
+.town {
+    border: none;
+    border-radius: 10px;
+}
+
+.icon_button {
+    border: none;
 }
 
 .container {
