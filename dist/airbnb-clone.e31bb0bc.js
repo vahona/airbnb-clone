@@ -28486,7 +28486,7 @@ function PlaceList() {
     }, /*#__PURE__*/_react.default.createElement("img", {
       className: "star",
       src: _start.default
-    }), " ", place.rating)), /*#__PURE__*/_react.default.createElement("div", null, place.city), /*#__PURE__*/_react.default.createElement("div", null, place.country), /*#__PURE__*/_react.default.createElement("div", null, place.title), /*#__PURE__*/_react.default.createElement("div", null, place.maxGuests));
+    }), " ", place.rating)));
   }));
 }
 
@@ -28502,7 +28502,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _PlaceList = _interopRequireDefault(require("./Components/PlaceList"));
 
@@ -28512,157 +28512,152 @@ var _stays = _interopRequireDefault(require("./stays"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function Main() {
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isopen = _useState2[0],
+      setIsopen = _useState2[1];
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      ismodal = _useState4[0],
+      setIsmodal = _useState4[1];
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+  var _useState5 = (0, _react.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      filter = _useState6[0],
+      setFilter = _useState6[1];
 
-var display = {
-  display: "block"
-};
-var hide = {
-  display: "none"
-};
+  var _useState7 = (0, _react.useState)(0),
+      _useState8 = _slicedToArray(_useState7, 2),
+      count = _useState8[0],
+      setCount = _useState8[1];
 
-var Main = /*#__PURE__*/function (_React$Component) {
-  _inherits(Main, _React$Component);
+  var _useState9 = (0, _react.useState)(0),
+      _useState10 = _slicedToArray(_useState9, 2),
+      countchild = _useState10[0],
+      setCountchild = _useState10[1];
 
-  var _super = _createSuper(Main);
-
-  function Main(props) {
-    var _this;
-
-    _classCallCheck(this, Main);
-
-    _this = _super.call(this, props);
-    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
-    _this.state = {
-      toggle: false
-    };
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    return _this;
+  function filterData(e) {
+    setFilter(e.target.value);
   }
 
-  _createClass(Main, [{
-    key: "toggle",
-    value: function toggle(e) {
-      e.preventDefault();
-      this.setState(function (prevState) {
-        return {
-          toggle: !prevState.toggle
-        };
-      });
-    }
-  }, {
-    key: "handleChange",
-    value: function handleChange(event) {
-      this.setState(event.target.value);
-      (0, _PlaceList.default)();
-    }
-  }, {
-    key: "filter",
-    value: function filter(PlaceList) {
-      var _this2 = this;
+  function handleChange() {
+    setIsopen(!isopen);
+  }
 
-      if (!this.props.filter) {
-        return PlaceList;
-      }
+  function handClick() {
+    setIsmodal(!ismodal);
+  }
 
-      return PlaceList.filter(function (PlaceLists) {
-        return PlaceList.toLowerCase().indexOf(_this2.props.filter.toLowerCase());
-      });
-    }
-  }, {
-    key: "updateSearch",
-    value: function updateSearch(inputValue) {
-      var filter = this.state.fielter;
-      this.setState({
-        fielter: inputValue
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var modal = [];
-      modal.push( /*#__PURE__*/_react.default.createElement("div", {
-        className: "modal",
-        style: this.state.toggle ? display : hide
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "modal_content"
-      }, /*#__PURE__*/_react.default.createElement("button", {
-        className: "close_button",
-        onClick: this.toggle
-      }, "X"), /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("div", {
-        className: "inputs"
-      }, /*#__PURE__*/_react.default.createElement("input", {
-        type: "text",
-        placeholder: "Location",
-        className: "location",
-        onChange: this.handleChange.bind(this),
-        value: this.props.searchText
-      }), /*#__PURE__*/_react.default.createElement("input", {
-        type: "text",
-        placeholder: "guests",
-        className: "guest",
-        onChange: this.handleChange,
-        value: this.props.searchText
-      })), /*#__PURE__*/_react.default.createElement("form", null, _stays.default.map(function (datas) {
-        return /*#__PURE__*/_react.default.createElement("fieldset", {
-          className: "form"
-        }, /*#__PURE__*/_react.default.createElement("input", {
-          type: "checkbox"
-        }), /*#__PURE__*/_react.default.createElement("label", null, datas.city, "  ", datas.country));
-      }))))));
-      return /*#__PURE__*/_react.default.createElement("section", {
-        className: "container"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        src: _logo.default,
-        className: "logo",
-        alt: "logo"
-      }), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
-        className: "button_container"
-      }, /*#__PURE__*/_react.default.createElement("input", {
-        className: "town",
-        placeholder: "Helsinki, Finland ",
-        onChange: this.handleChange,
-        value: this.props.searchText
-      }), /*#__PURE__*/_react.default.createElement("input", {
-        className: "add",
-        placeholder: " Add guests",
-        onChange: this.handleChange,
-        value: this.props.searchText
-      }), /*#__PURE__*/_react.default.createElement("button", {
-        className: "icon_button",
-        onClick: this.toggle
-      }, this.toggle))), modal, /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
-        className: "stays"
-      }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
-        className: "buttons"
-      }), /*#__PURE__*/_react.default.createElement("div", {
-        className: "displayed"
-      }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null)));
-    }
-  }]);
+  function increment() {}
 
-  return Main;
-}(_react.default.Component);
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("section", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _logo.default,
+    className: "logo",
+    alt: "logo"
+  }), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "button_container"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "town",
+    type: "button",
+    onClick: handleChange
+  }, " Helsinki, Finland"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "add",
+    type: "button",
+    onClick: handClick
+  }, "Add guests"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "icon_button"
+  }))), /*#__PURE__*/_react.default.createElement("h1", null, " Stay in finland "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "stays"
+  }, "12+ stays"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "buttons"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "displayed"
+  }, /*#__PURE__*/_react.default.createElement(_PlaceList.default, null))), isopen && /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal_content"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    className: "close_button",
+    onClick: handleChange
+  }, "X"), /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "inputs"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "Location",
+    className: "location",
+    onChange: function onChange(e) {
+      return setFilter(e.target.value);
+    }
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "guests",
+    className: "guest"
+  })), /*#__PURE__*/_react.default.createElement("form", null, _stays.default.filter(function (datas) {
+    return datas.city.toLowerCase().includes(filter);
+  }).map(function (datas) {
+    return /*#__PURE__*/_react.default.createElement("fieldset", {
+      className: "form"
+    }, /*#__PURE__*/_react.default.createElement("input", {
+      type: "checkbox"
+    }), /*#__PURE__*/_react.default.createElement("label", null, datas.city, " ", datas.country));
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    className: "search_button"
+  }, "Search"))))), ismodal && /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal_content"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    className: "close_button",
+    onClick: handClick
+  }, "X"), /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h1", null, "Edit your search"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "inputs"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "Location",
+    className: "location"
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "guests",
+    className: "guest"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "side"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Adults"), /*#__PURE__*/_react.default.createElement("p", null, "Age 13 or above"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      return setCount(count - 1);
+    }
+  }, "-"), count, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      return setCount(count + 1);
+    }
+  }, "+"))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Children"), /*#__PURE__*/_react.default.createElement("p", null, "Age 2 - 12"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      return setCountchild(countchild - 1);
+    }
+  }, "-"), countchild, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      return setCountchild(countchild + 1);
+    }
+  }, "+")))), /*#__PURE__*/_react.default.createElement("button", {
+    className: "search_button"
+  }, "Search")))));
+} // }
+
 
 var _default = Main;
 exports.default = _default;
@@ -28706,7 +28701,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61347" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62007" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

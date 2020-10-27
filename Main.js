@@ -1,105 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PlaceList from './Components/PlaceList'
 import Logo from './logo.png'
 import data from './stays'
 
-const display = {
-  display: "block"
-};
-
-const hide = {
-  display: "none"
-};
 
 
-class Main extends React.Component {
 
-  constructor(props) {
-    super(props)
 
-    this.toggle = this.toggle.bind(this);
+function Main()  {
 
-    this.state = {
-      toggle: false,
+  const [isopen, setIsopen] = useState(false)
+  const [ismodal, setIsmodal] = useState(false)
+  const [filter, setFilter] = useState([])
+  const [count, setCount] = useState(0)
+  const [countchild, setCountchild] = useState(0)
 
-    }
-    this.handleChange = this.handleChange.bind(this)
-    
+
+  function filterData (e) {
+      setFilter(e.target.value)
   }
 
-  toggle(e) {
-    e.preventDefault();
-    this.setState((prevState) => ({
-      toggle: !prevState.toggle
-
-    }));
-    
+  function handleChange () {
+    setIsopen(!isopen);
   }
 
-  handleChange(event) {
-    this.setState(event.target.value);
-    PlaceList()
+  function handClick () {
+    setIsmodal(!ismodal)
   }
 
-  filter(PlaceList) {
-    if(!this.props.filter) {
-      return PlaceList
-    }
-    return PlaceList.filter((PlaceLists) => PlaceList.toLowerCase().indexOf(this.props.filter.toLowerCase()))
-  }
-
-  updateSearch(inputValue) {
-   let filter = this.state.fielter;
-   this.setState({fielter: inputValue});
+  function increment() {
 
   }
-
-  render() {
-
-    var modal = [];
-    modal.push(<div className="modal" style={this.state.toggle ? display : hide}>
-      <div className="modal_content">
-        <button className="close_button" onClick={this.toggle}>X</button>
-        <section>
-          <h1>Edit your search</h1>
-          <div className="inputs">
-            <input 
-             type="text"
-             placeholder="Location" 
-             className="location"
-             onChange={this.handleChange.bind(this)} 
-             value={this.props.searchText} />
-            <input type="text" placeholder="guests" className="guest" onChange={this.handleChange} value={this.props.searchText} />
-          </div>
-          <form >
-            {data.map(datas => {
-              return (
-                <fieldset className="form">
-                  <input type="checkbox" />
-                  <label>{datas.city}  {datas.country}</label>
-                </fieldset>
-              )
-            })}
-          </form>
-        </section>
-      </div>
-    </div>
-
-    );
 
     return (
+      <div>
       <section className="container">
         <img src={Logo} className="logo" alt="logo" />
         <form>
           <div className="button_container">
-            <input className="town" placeholder='Helsinki, Finland ' onChange={this.handleChange} value={this.props.searchText} />
-            <input className="add" placeholder=" Add guests" onChange={this.handleChange} value={this.props.searchText} />
-            <button className="icon_button" onClick={this.toggle}>
-              {this.toggle}
+            <button className="town" type="button" onClick={handleChange} > Helsinki, Finland</button>
+            <button className="add" type="button" onClick={handClick} >Add guests</button>
+            <button className="icon_button">
             </button>
           </div>
         </form>
-        {modal}
+        
         <h1> Stay in finland </h1>
         <div className="stays">12+ stays</div>
         <div className="buttons">
@@ -108,9 +53,77 @@ class Main extends React.Component {
           <PlaceList />
         </div>
       </section>
+        {isopen &&
+          <div className="modal_content">
+            <div >
+              <button className="close_button" onClick={handleChange}>X</button>
+              <section>
+                <h1>Edit your search</h1>
+                <div className="inputs">
+                  <input
+                    type="text"
+                    placeholder="Location"
+                    className="location"
+                    onChange={(e) => setFilter(e.target.value)} />
+                  <input type="text" placeholder="guests" className="guest" />
+                </div>
+                <form >
+                  {data.filter((datas) => {
+                    return datas.city.toLowerCase().includes(filter)}).map(datas => {
+                    return (
+                      <fieldset className="form">
+                        <input type="checkbox" />
+                        <label>{datas.city} {datas.country}</label>
+                      </fieldset>
+                    )
+                  })}
+
+                <button className="search_button">Search</button>
+                </form>
+              </section>
+            </div>
+          </div>}
+        {ismodal &&
+          <div className="modal_content">
+            <div >
+            <button className="close_button" onClick={handClick}>X</button>
+              <section>
+                <h1>Edit your search</h1>
+                <div className="inputs">
+                  <input
+                    type="text"
+                    placeholder="Location"
+                    className="location" />
+                  <input type="text" placeholder="guests" className="guest" />
+                </div>
+                <div className="side" >
+                  <div>
+                  <h2>Adults</h2>
+                  <p>Age 13 or above</p>
+                  <div>
+                    <button onClick={() => setCount(count - 1)}>-</button>
+                    {count}
+                    <button onClick={() => setCount(count + 1)}>+</button>
+                  </div>
+                </div>
+              <div >
+                <h2>Children</h2>
+                <p>Age 2 - 12</p>
+                <div>
+                    <button onClick={() => setCountchild(countchild - 1)}>-</button>
+                    {countchild}
+                    <button onClick={() => setCountchild(countchild + 1)}>+</button>
+                </div>
+                </div>
+              </div>
+              <button className="search_button">Search</button>
+              </section>
+            </div>
+          </div>}
+      </div>
     );
   }
 
-}
+// }
 
 export default Main

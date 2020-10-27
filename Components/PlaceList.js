@@ -21,10 +21,6 @@ function PlaceList() {
           </div>
           <div className="rating"><img className="star" src={Start} /> {place.rating}</div>
           </article>
-          <div>{place.city}</div>
-          <div>{place.country}</div>
-          <div>{place.title}</div>
-          <div>{place.maxGuests}</div>
           </section>
         )
       })}

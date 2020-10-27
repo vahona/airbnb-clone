@@ -105,6 +105,33 @@ button > * {
    
 }
 
+.modal_content {
+    background-color: white;
+    top: 10px;
+    position: absolute;
+    width: 100%;
+    margin-inline-start: 2rem;
+    scroll-margin-inline-end: 2rem;
+    box-shadow: 1px 1px 20px rgb(216, 216, 219);
+}
+
+.search_button {
+    background-image: url('./icon.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-color: rgba(245, 30, 30, 0.693);
+    color: white;
+    padding: 1.5rem;
+    border: 1px white solid;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.side {
+    text-align: center;
+}
+
 span {
     width: 0.5px;
     height: 2rem;
