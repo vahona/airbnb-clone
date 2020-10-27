@@ -28553,10 +28553,7 @@ function Main() {
   var _useState9 = (0, _react.useState)(0),
       _useState10 = _slicedToArray(_useState9, 2),
       countchild = _useState10[0],
-      setCountchild = _useState10[1]; // function filterData (e) {
-  //     setFilter(e.target.value)
-  // }
-
+      setCountchild = _useState10[1];
 
   function handleChange() {
     setIsopen(!isopen);
@@ -28619,7 +28616,8 @@ function Main() {
   }), /*#__PURE__*/_react.default.createElement("button", {
     className: "search_button"
   }, "Search"))))), ismodal && /*#__PURE__*/_react.default.createElement("div", {
-    className: "modal_content"
+    className: "modal_content",
+    key: _stays.default.id
   }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     className: "close_button",
     onClick: handClick
