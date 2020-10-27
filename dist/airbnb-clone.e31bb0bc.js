@@ -28528,6 +28528,7 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+// import Filtercity from './Components/Filtercity'
 function Main() {
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -28539,24 +28540,23 @@ function Main() {
       ismodal = _useState4[0],
       setIsmodal = _useState4[1];
 
-  var _useState5 = (0, _react.useState)([]),
+  var _useState5 = (0, _react.useState)(0),
       _useState6 = _slicedToArray(_useState5, 2),
-      filter = _useState6[0],
-      setFilter = _useState6[1];
+      count = _useState6[0],
+      setCount = _useState6[1];
 
-  var _useState7 = (0, _react.useState)(0),
+  var _useState7 = (0, _react.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
-      count = _useState8[0],
-      setCount = _useState8[1];
+      filter = _useState8[0],
+      setFilter = _useState8[1];
 
   var _useState9 = (0, _react.useState)(0),
       _useState10 = _slicedToArray(_useState9, 2),
       countchild = _useState10[0],
-      setCountchild = _useState10[1];
+      setCountchild = _useState10[1]; // function filterData (e) {
+  //     setFilter(e.target.value)
+  // }
 
-  function filterData(e) {
-    setFilter(e.target.value);
-  }
 
   function handleChange() {
     setIsopen(!isopen);
@@ -28565,8 +28565,6 @@ function Main() {
   function handClick() {
     setIsmodal(!ismodal);
   }
-
-  function increment() {}
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("section", {
     className: "container"
@@ -28613,11 +28611,11 @@ function Main() {
   })), /*#__PURE__*/_react.default.createElement("form", null, _stays.default.filter(function (datas) {
     return datas.city.toLowerCase().includes(filter);
   }).map(function (datas) {
-    return /*#__PURE__*/_react.default.createElement("fieldset", {
+    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("fieldset", {
       className: "form"
     }, /*#__PURE__*/_react.default.createElement("input", {
       type: "checkbox"
-    }), /*#__PURE__*/_react.default.createElement("label", null, datas.city, " ", datas.country));
+    }), /*#__PURE__*/_react.default.createElement("label", null, datas.city, " ", datas.country)));
   }), /*#__PURE__*/_react.default.createElement("button", {
     className: "search_button"
   }, "Search"))))), ismodal && /*#__PURE__*/_react.default.createElement("div", {

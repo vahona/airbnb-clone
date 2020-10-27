@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PlaceList from './Components/PlaceList'
 import Logo from './logo.png'
 import data from './stays'
+// import Filtercity from './Components/Filtercity'
 
 
 
@@ -11,14 +12,14 @@ function Main()  {
 
   const [isopen, setIsopen] = useState(false)
   const [ismodal, setIsmodal] = useState(false)
-  const [filter, setFilter] = useState([])
   const [count, setCount] = useState(0)
+  const [filter, setFilter] = useState([])
   const [countchild, setCountchild] = useState(0)
 
 
-  function filterData (e) {
-      setFilter(e.target.value)
-  }
+  // function filterData (e) {
+  //     setFilter(e.target.value)
+  // }
 
   function handleChange () {
     setIsopen(!isopen);
@@ -28,9 +29,6 @@ function Main()  {
     setIsmodal(!ismodal)
   }
 
-  function increment() {
-
-  }
 
     return (
       <div>
@@ -53,7 +51,7 @@ function Main()  {
           <PlaceList />
         </div>
       </section>
-        {isopen &&
+        {isopen && 
           <div className="modal_content">
             <div >
               <button className="close_button" onClick={handleChange}>X</button>
@@ -69,16 +67,20 @@ function Main()  {
                 </div>
                 <form >
                   {data.filter((datas) => {
-                    return datas.city.toLowerCase().includes(filter)}).map(datas => {
+                    return datas.city.toLowerCase().includes(filter)
+                  }).map(datas => {
                     return (
+                      <div>
                       <fieldset className="form">
                         <input type="checkbox" />
                         <label>{datas.city} {datas.country}</label>
                       </fieldset>
+                      
+                      </div>
                     )
                   })}
 
-                <button className="search_button">Search</button>
+                  <button className="search_button">Search</button>
                 </form>
               </section>
             </div>

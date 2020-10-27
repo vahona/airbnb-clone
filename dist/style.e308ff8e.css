@@ -109,7 +109,8 @@ button > * {
     background-color: white;
     top: 10px;
     position: absolute;
-    width: 100%;
+    width: 90%;
+    border-radius: 10px;
     margin-inline-start: 2rem;
     scroll-margin-inline-end: 2rem;
     box-shadow: 1px 1px 20px rgb(216, 216, 219);
