@@ -6,7 +6,6 @@ import Start from  '../start.png'
 
 function PlaceList() {
 
-
   return (
     <div className="places" >
       {data.map(place=> {
