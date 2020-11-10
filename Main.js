@@ -6,8 +6,6 @@ import data from './stays'
 
 
 
-
-
 function Main() {
 
   const [isopen, setIsopen] = useState(false)
@@ -75,7 +73,6 @@ function Main() {
                     </div>
                   )
                 })}
-
                 <button className="search_button">Search</button>
               </form>
             </section>
@@ -90,9 +87,9 @@ function Main() {
               <div className="inputs">
                 <input
                   type="text"
-                  placeholder="Location"
+                  placeholder="location"
                   className="location" />
-                <input type="text" placeholder="guests" className="guest" />
+              <label className="label"><input type="text" placeholder="guest" className="guest" />{count}</label>
               </div>
               <div className="side" >
                 <div>

@@ -3,7 +3,6 @@ import data from '../stays'
 import Start from  '../start.png'
 
 
-
 function PlaceList() {
 
   return (
@@ -26,5 +25,4 @@ function PlaceList() {
     </div>
   )
 }
-
 export default PlaceList

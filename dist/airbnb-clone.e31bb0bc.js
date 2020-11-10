@@ -28625,13 +28625,15 @@ function Main() {
     className: "inputs"
   }, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    placeholder: "Location",
+    placeholder: "location",
     className: "location"
-  }), /*#__PURE__*/_react.default.createElement("input", {
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    className: "label"
+  }, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    placeholder: "guests",
+    placeholder: "guest",
     className: "guest"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  }), count)), /*#__PURE__*/_react.default.createElement("div", {
     className: "side"
   }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Adults"), /*#__PURE__*/_react.default.createElement("p", null, "Age 13 or above"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
